@@ -1,0 +1,24 @@
+{
+    "name": "demo//tic-tac-toe",
+    "description": "Demo Project",
+    "type": "project",
+    "license": ["free"],
+    "authors": [
+        {
+            "name": "Ondrej Popik",
+            "email": "ondrejpopik@gmail.sk"
+        }
+    ],
+    "require": {
+        "php": ">= 5.4",
+        "nette/nette": "~2.2",
+        "kdyby/console": "~2.0",
+        "kdyby/doctrine": "~2.0",
+        "kdyby/translation": "~2.0",
+        "leafo/lessphp": "~0.4",
+        "jeremymlane/bootbox": "dev-master"
+    },
+    "require-dev": {
+        "nette/tester": "@dev"
+    }
+}
