@@ -1,0 +1,41 @@
+{**
+ * @param string   $basePath web base path
+ * @param array    $flashes  flash messages
+ *}
+
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="">
+
+    <title>Demo Title</title>
+    <link rel="stylesheet" type="text/css" href="{$basePath}/js/bootstrap/dist/css/bootstrap.css">
+
+    <link rel="stylesheet" type="text/css" href="{$basePath}/css/style.css">
+
+    <link rel="shortcut icon" href="img/favicon.ico">
+    <script src="{$basePath}/js/jquery/dist/jquery.js"></script>
+    <script src="{$basePath}/js/jquery-ui/jquery-ui.js"></script>
+    <script src="{$basePath}/js/handlebars/handlebars.js"></script>
+    <script src="{$basePath}/js/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="{$basePath}/js/kineticjs/kinetic.js"></script>
+    <script src="{$basePath}/js/game.js"></script>
+
+
+    {block #head}{/block}
+</head>
+
+<body>
+{include #content}
+<div>Hello</div>
+
+{block #scrips}{/block}
+</body>
+</html>

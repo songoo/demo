@@ -1,0 +1,46 @@
+#
+# SECURITY WARNING: it is CRITICAL that this file & directory are NOT accessible directly via a web browser!
+#
+# If you don't protect this directory from direct web access, anybody will be able to see your passwords.
+# http://nette.org/security-warning
+#
+parameters:
+    vendorDir: %appDir%/../vendor
+    uploadDir: /upload
+
+php:
+    date.timezone: Europe/Prague
+
+nette:
+    application:
+        errorPresenter: Error
+        mapping:
+            *: App\*Module\Presenters\*Presenter
+
+    session:
+        expiration: 14 days
+
+extensions:
+    annotations: Kdyby\Annotations\DI\AnnotationsExtension
+    doctrine: Kdyby\Doctrine\DI\OrmExtension
+    console: Kdyby\Console\DI\ConsoleExtension
+    events: Kdyby\Events\DI\EventsExtension
+    translation: Kdyby\Translation\DI\TranslationExtension
+
+doctrine:
+     metadata:
+         Demo\Model: annotations(%appDir%/libs/Demo/Model)
+
+translation:
+    whitelist: [en,sk]
+    default: sk
+    fallback: [en_GB]
+
+services:
+    - App\Router\RouterFactory
+    router: @App\Router\RouterFactory::createRouter
+    # Commands
+
+    # Storage
+#    - Demo\Model\Import\Storage\Doctrine\DoctrineGameService(@doctrine.dao(Demo\Model\Entity\Game))
+
