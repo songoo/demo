@@ -42,5 +42,6 @@ services:
     # Commands
 
     # Storage
-#    - Demo\Model\Import\Storage\Doctrine\DoctrineGameService(@doctrine.dao(Demo\Model\Entity\Game))
-
+    - Demo\Model\Dao\GameDao(@doctrine.dao(Demo\Model\Entity\Game))
+    - Demo\Model\Dao\GameDao(@doctrine.dao(Demo\Model\Entity\Game))
+    - Demo\Model\Builder\DefaultEntityBuilder
